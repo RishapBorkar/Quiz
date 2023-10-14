@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+.questionPage{
+    width: 750px;
+    height: 1400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #AF9CF3;
+    background-blend-mode: multiply;
+}
+
+.progressCircle1{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    position: absolute;
+    top: 116px;
+    left: 246px;
+}
+
+.progressCircle2{
+    z-index: 100;
+    width: 186px;
+    height: 186px; 
+    border-radius: 50%;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    border: 16px solid #F3F4FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    /* mask: conic-gradient(#00ff00 0deg 72deg, #F3F4FA 72deg 360deg); */
+}
+
+.span1{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 96px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 96px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #000000;
+}
+
+.span2{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 96px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #999999;
+}
+
+
+.queContainer{
+    width: 750px;
+    height: 1310px;
+    position: absolute;
+    top: 240px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    background: #FFFFFF;
+}
+
+.queText{
+    padding-right: 20px;
+    position: absolute;
+    top: 110px;
+    left: 40px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 56px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #000000;
+}
+
+.queOptions{
+    margin-top: 50px;
+    height: 800px;
+    position: absolute;
+    top: 340px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options{
+    width: 670px;
+    height: 160px;
+    border-radius: 25px;
+    background: #F3F4FA;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.checkBox{
+    width: 48px;
+    height: 48px;
+    margin-left: 40px;
+    border-radius: 50%;
+    border: 4px solid #e1e1e1
+}
+
+.checkBox:hover{
+    cursor: pointer;
+}
+
+.optionText{
+    margin-left: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 45px;
+}
+
+.nextBtn{
+    width: 710px;
+    height: 120px;
+    position: absolute;
+    top: 1360px;
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 67px;
+    background: #FF3B3F;
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 120px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+    border: none;
+}
+
+.nextBtn:hover{
+    cursor: pointer;
+}
+
+.checked{
+    background-color: #44B77B;
+}

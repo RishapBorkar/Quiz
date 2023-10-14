@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+.homeContainer{
+    width: 750px;
+    height: 1400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background: linear-gradient(180deg, #ffffff 7.92%, #AF9CF3 86.48%);
+    background-blend-mode: multiply;
+}
+
+.logo{
+    width: 291px;
+    height: 70px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%) ;
+}
+
+.circle {
+    width: 432px;
+    height: 396px;
+    position: absolute;
+    top: 416px;
+    left: 159px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 8px 8px 0px #0000001A;
+}
+
+.quizText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 90px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FF3B3C;
+}
+
+/* .startBtnDiv{
+    width: 670px;
+    height: 160px;
+    position: absolute;
+    top: 1200px;
+    left: 40px;
+} */
+
+.startBtn{
+    width: 630px;
+    height: 120px;
+    margin: 20px 20px;
+    position: absolute;
+    top: 1200px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 67px;
+    background: #FF3B3F;
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 120px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+    border: none;
+}
+
+.startBtn:hover{
+    cursor: pointer;
+}
+
+
+  
