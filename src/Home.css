@@ -1,15 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
 
-.homeContainer{
-    width: 750px;
+/* .homeContainer{
+    display: flex;
+    justify-content: center;
     height: 1400px;
+    width: 750px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
+    background: linear-gradient(180deg, #ffffff 7.92%, #AF9CF3 86.48%) no-repeat center/100%;
+    background-blend-mode: multiply;
+    background-size: cover;
+} */
+
+.homeContainer{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 750px;
+    position: relative;
+    color: #ffffff;
     background: linear-gradient(180deg, #ffffff 7.92%, #AF9CF3 86.48%);
     background-blend-mode: multiply;
+    background-size: 100% 100%;
 }
 
 .logo{
@@ -26,7 +41,8 @@
     height: 396px;
     position: absolute;
     top: 416px;
-    left: 159px;
+    left: 50%;
+    transform: translateX(-50%) ;
     border-radius: 50%;
     background-color: #ffffff;
     display: flex;
@@ -48,21 +64,14 @@
     color: #FF3B3C;
 }
 
-/* .startBtnDiv{
-    width: 670px;
-    height: 160px;
-    position: absolute;
-    top: 1200px;
-    left: 40px;
-} */
-
 .startBtn{
     width: 630px;
     height: 120px;
     margin: 20px 20px;
     position: absolute;
     top: 1200px;
-    left: 40px;
+    left: 50%;
+    transform: translateX(-50%) ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,5 +93,9 @@
     cursor: pointer;
 }
 
-
-  
+@media (max-width: 477px)  {
+    .homeContainer{
+        height: 1624px;
+        width: 750px;
+    }
+}

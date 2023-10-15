@@ -2,8 +2,9 @@
 
 
 .resultPage{
-    width: 750px;
+    display: flex;
     height: 1400px;
+    width: 750px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,7 +12,6 @@
     background: #AF9CF3;
     background-image: url('backgroundImg.svg');
     background-repeat: no-repeat;
-    background-blend-mode: multiply;
 }
 
 .resultContainer{
