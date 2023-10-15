@@ -15,14 +15,17 @@ function shuffleArray(array) {
 function Question() {
   const [questionData, setQuestionData] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [currentCheckedIndex, setCurrentCheckedIndex] = useState(-1);
+  //   const [currentCheckedIndex, setCurrentCheckedIndex] = useState([]);
+  const [userAnswers, setUserAnswers] = useState(
+    Array(questionData.length).fill(null)
+  );
   const [shuffledOptions, setShuffledOptions] = useState([]);
   const [isLastQuestion, setIsLastQuestion] = useState(false);
 
   const navigate = useNavigate();
 
-  const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [incorrectAnswers, setIncorrectAnswers] = useState(0);
+  //   const [correctAnswers, setCorrectAnswers] = useState(0);
+  //   const [incorrectAnswers, setIncorrectAnswers] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -58,27 +61,39 @@ function Question() {
   const handleNextQuestion = () => {
     if (currentQuestionIndex < questionData.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setCurrentCheckedIndex(-1);
     } else {
-      navigate("/result");
+      // Calculate the number of correct and incorrect answers
+      const correctAnswers = userAnswers.filter(
+        (userAnswer, index) => userAnswer === questionData[index].correctAnswer
+      ).length;
+
+      const incorrectAnswers = userAnswers.filter(
+        (userAnswer, index) => userAnswer !== questionData[index].correctAnswer
+      ).length;
+
+      const totalQuestions = questionData.length;
+
+      const percentage = (correctAnswers / totalQuestions) * 100;
+
+      // Pass the correct and incorrect answers as query parameters
+      navigate(
+        `/result?correct=${correctAnswers}&incorrect=${incorrectAnswers}&total=${totalQuestions}&percentage=${percentage}`
+      );
+
+      console.log("correct answers", correctAnswers);
+      console.log("incorrect answers", incorrectAnswers);
+      console.log("percentage", percentage);
     }
   };
 
   const handleCheckboxClick = (index) => {
-    // Create a new array with the clicked state toggled for the clicked checkbox
-    setCurrentCheckedIndex(index);
+    // Create a new array with the selected answer for the current question
+    const newUserAnswers = [...userAnswers];
+    newUserAnswers[currentQuestionIndex] = shuffledOptions[index];
+    setUserAnswers(newUserAnswers);
   };
 
   const handleSubmit = () => {
-    const currentQuestion = questionData[currentQuestionIndex];
-    const correctAnswerIndex = shuffledOptions.indexOf(
-      currentQuestion.correctAnswer
-    );
-    if (currentCheckedIndex === correctAnswerIndex) {
-      setCorrectAnswers(correctAnswers + 1);
-    } else {
-      setIncorrectAnswers(incorrectAnswers + 1);
-    }
     handleNextQuestion();
   };
 
@@ -116,7 +131,7 @@ function Question() {
             <p className="options" key={index}>
               <div
                 className={`checkBox ${
-                  currentCheckedIndex === index ? "checked" : ""
+                  userAnswers[currentQuestionIndex] === option ? "checked" : ""
                 }`}
                 onClick={() => handleCheckboxClick(index)}
               ></div>
@@ -125,7 +140,10 @@ function Question() {
           ))}
         </div>
       </div>
-      <button className="nextBtn" onClick={isLastQuestion ? handleSubmit : handleNextQuestion}>
+      <button
+        className="nextBtn"
+        onClick={isLastQuestion ? handleSubmit : handleNextQuestion}
+      >
         {/* Conditional rendering of button text */}
         {isLastQuestion ? "Submit" : "Next"}
         <span className="arrow"></span>
