@@ -80,7 +80,7 @@
 
 @media (max-width: 477px)  {
     .homeContainer{
-        height: 1624px;
+        height: 200vh;
         width: 750px;
     }
 }

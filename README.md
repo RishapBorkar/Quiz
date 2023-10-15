@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+=============
+Prerequisites:
+=============
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Before getting started, make sure you have the following software and tools installed on your system:
 
-## Available Scripts
+1. Node.js: Ensure you have Node.js installed. If not, download it from nodejs.org.
 
-In the project directory, you can run:
+2. npm (Node Package Manager): Verify that npm is installed. You can check its version by running:
+   npm -v
 
-### `npm start`
+3. Git: Install Git if it's not already installed. You can download it from git-scm.com.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+======================
+Cloning the Repository:
+======================
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Open your terminal and navigate to the directory where you want to clone the app repository. Use the following command to clone the repository:
+git clone https://github.com/RishapBorkar/Quiz.git
 
-### `npm test`
+=======================
+Installing Dependencies:
+=======================
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After cloning the repository, navigate into the project directory using the following command:
+cd Quiz
 
-### `npm run build`
+Now, install the project's dependencies by running:
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This command will download and install all the necessary packages and libraries required for the app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+===============================
+Starting the Development Server:
+===============================
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the React Quiz App locally, use the following command:
+npm start
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The development server will compile the code and open the app in your default web browser. You can access the app at http://localhost:3000.
