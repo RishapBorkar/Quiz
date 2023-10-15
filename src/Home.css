@@ -3,7 +3,7 @@
 .homeContainer{
     display: flex;
     justify-content: center;
-    height: 400vh;
+    height: 100vh;
     width: 750px;
     position: relative;
     color: #ffffff;
