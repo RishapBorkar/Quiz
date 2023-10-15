@@ -24,6 +24,7 @@ function Question() {
 
   const navigate = useNavigate();
 
+  // Fetching data from an external API and populating the questionData state with the fetched data
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -38,8 +39,8 @@ function Question() {
     fetchData();
   }, []);
 
+  // Shuffle the options whenever the question index changes
   useEffect(() => {
-    // Shuffle the options whenever the question index changes
     if (questionData.length > 0) {
       const currentQuestion = questionData[currentQuestionIndex];
       const options = [
@@ -50,11 +51,12 @@ function Question() {
     }
   }, [currentQuestionIndex, questionData]);
 
+  // Update the "isLastQuestion" state when the question index changes
   useEffect(() => {
-    // Update the "isLastQuestion" state when the question index changes
     setIsLastQuestion(currentQuestionIndex === questionData.length - 1);
   }, [currentQuestionIndex, questionData]);
 
+  //  Handling the navigation to the next question and, when the last question is reached, calculating the user's performance and navigating to the result page
   const handleNextQuestion = () => {
     if (currentQuestionIndex < questionData.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -102,6 +104,7 @@ function Question() {
     handleNextQuestion();
   };
 
+  // Rendering a "Loading..." message when the questionData is still being fetched and is not yet available
   if (
     questionData.length === 0 ||
     currentQuestionIndex >= questionData.length
@@ -109,6 +112,7 @@ function Question() {
     return <p>Loading...</p>;
   }
 
+  // Checking the format and availability of the current question data and rendering an error message if any of the required data is missing or in an incorrect format
   const currentQuestion = questionData[currentQuestionIndex];
 
   if (

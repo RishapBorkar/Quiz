@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
 
-/* .homeContainer{
-    display: flex;
-    justify-content: center;
-    height: 1400px;
-    width: 750px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    background: linear-gradient(180deg, #ffffff 7.92%, #AF9CF3 86.48%) no-repeat center/100%;
-    background-blend-mode: multiply;
-    background-size: cover;
-} */
-
 .homeContainer{
     display: flex;
     justify-content: center;
