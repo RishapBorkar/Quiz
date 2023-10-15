@@ -3,7 +3,7 @@
 .homeContainer{
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 400vh;
     width: 750px;
     position: relative;
     color: #ffffff;
@@ -80,7 +80,7 @@
 
 @media (max-width: 477px)  {
     .homeContainer{
-        height: 200vh;
+        height: 1690px;
         width: 750px;
     }
 }
