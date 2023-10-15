@@ -1,4 +1,4 @@
-This project is best visible on a screen device having a width of less than 477 pixels.
+This project is best visible on a screen device having a width of less than 477 pixels or when the browser window zoom is adjusted to 25%.
 
 Prerequisites:
 
