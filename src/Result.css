@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
 
 
-.resultPage{
+/* .resultPage{
     display: flex;
     height: 1400px;
     width: 750px;
@@ -12,13 +12,24 @@
     background: #AF9CF3;
     background-image: url('backgroundImg.svg');
     background-repeat: no-repeat;
+} */
+
+.resultPage{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 750px;
+    position: relative;
+    background: #AF9CF3;
+    background-image: url('backgroundImg.svg');
+    background-repeat: no-repeat;
 }
 
 .resultContainer{
     width: 750px;
-    height: 1310px;
+    height: 1390px;
     position: absolute;
-    top: 240px;
+    top: 234px;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
     background: #FFFFFF;
@@ -66,7 +77,6 @@
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
-    /* background-color: #FFFFFF; */
     background-color: #EBEDF5;
     border-radius: 50%;
     z-index: 200;
@@ -88,11 +98,9 @@
     position: absolute;
     width: 50%;
     height: 100%;
-    /* background-color: var(--green); */
     background: linear-gradient(0deg, #FF3B3F  0%, #FFD033 47.9%, #44B77B 100%);
     transform: rotate(90deg);
     transform-origin: center right;
-    /* animation: rotate 2s ease-in-out; */
 }
 
 .bar2{
@@ -109,10 +117,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* font-family: 'Nunito Sans', sans-serif;
-    font-size: 64px;
-    font-weight: 900;
-    line-height: 67px; */
     border: 2px solid #EBEDF5;}
 
 .bar2 .resultPercentage{
@@ -138,16 +142,13 @@
     width: 100%;
     height: 40%;
     background-color: #000000 !important;
-    /* clip-path: polygon(50% 0, 50% 0, 52% 100%, 48% 100%); */
     clip-path: polygon(50% 0, 50% 0, 65% 100%, 35% 100%);
-    /* transform: rotate(90deg); */
     transform-origin: bottom center;
     animation: rotate 2s ease-in-out;
     z-index: 300;
 }
 
 .result{
-    height: 800px;
     position: absolute;
     top: 650px;
     display: flex;
@@ -196,7 +197,6 @@
     border-radius: 50%;
     border: none;
     margin-right: 20px;
-    /* background: #44B77B; */
     background: #FF3B3F;
 }
 
@@ -245,5 +245,12 @@
 @keyframes rotate {
     0%{
         transform: rotate(-90deg);
+    }
+}
+
+@media (max-width: 477px)  {
+    .resultPage{
+        width: 750px;
+        height: 1600px;
     }
 }
