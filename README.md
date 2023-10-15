@@ -1,3 +1,4 @@
+This project is best visible on a screen device having a width of less than 477 pixels.
 =============
 Prerequisites:
 =============
