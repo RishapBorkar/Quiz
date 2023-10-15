@@ -15,17 +15,14 @@ function shuffleArray(array) {
 function Question() {
   const [questionData, setQuestionData] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  //   const [currentCheckedIndex, setCurrentCheckedIndex] = useState([]);
   const [userAnswers, setUserAnswers] = useState(
     Array(questionData.length).fill(null)
   );
   const [shuffledOptions, setShuffledOptions] = useState([]);
   const [isLastQuestion, setIsLastQuestion] = useState(false);
+  const [isNextDisabled, setIsNextDisabled] = useState(true);
 
   const navigate = useNavigate();
-
-  //   const [correctAnswers, setCorrectAnswers] = useState(0);
-  //   const [incorrectAnswers, setIncorrectAnswers] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,6 +58,7 @@ function Question() {
   const handleNextQuestion = () => {
     if (currentQuestionIndex < questionData.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setIsNextDisabled(true); // Disable the "Next" button again
     } else {
       // Calculate the number of correct and incorrect answers
       const correctAnswers = userAnswers.filter(
@@ -91,9 +89,16 @@ function Question() {
     const newUserAnswers = [...userAnswers];
     newUserAnswers[currentQuestionIndex] = shuffledOptions[index];
     setUserAnswers(newUserAnswers);
+
+    // Enable the "Next" button when an option is selected
+    setIsNextDisabled(false);
   };
 
   const handleSubmit = () => {
+    if (userAnswers[currentQuestionIndex] === null) {
+      // Don't proceed to the next question without selecting an option
+      return;
+    }
     handleNextQuestion();
   };
 
@@ -143,6 +148,7 @@ function Question() {
       <button
         className="nextBtn"
         onClick={isLastQuestion ? handleSubmit : handleNextQuestion}
+        disabled={isNextDisabled} // Disable the button if no option is selected
       >
         {/* Conditional rendering of button text */}
         {isLastQuestion ? "Submit" : "Next"}

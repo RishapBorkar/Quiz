@@ -31,7 +31,6 @@ function Result() {
           <div className="progress">
             <div className="bar"></div>
             <div className="bar2">
-              {/* <div className="resultPercentage">50%</div> */}
               <div className="resultPercentage">{percentage.toFixed(0)}%</div>
             </div>
             <div className="needle"></div>
