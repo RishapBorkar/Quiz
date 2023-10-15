@@ -1,6 +1,8 @@
 This project is best visible on a screen device having a width of less than 477 pixels or when the browser window zoom is adjusted to 25%.
+=============================
 
 Prerequisites:
+=============
 
 Before getting started, make sure you have the following software and tools installed on your system:
 
@@ -12,11 +14,13 @@ Before getting started, make sure you have the following software and tools inst
 3. Git: Install Git if it's not already installed. You can download it from git-scm.com.
 
 Cloning the Repository:
+======================
 
 Open your terminal and navigate to the directory where you want to clone the app repository. Use the following command to clone the repository:
 git clone https://github.com/RishapBorkar/Quiz.git
 
 Installing Dependencies:
+=======================
 
 After cloning the repository, navigate into the project directory using the following command:
 cd Quiz
